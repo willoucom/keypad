@@ -19,6 +19,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
 
 import { FormsModule } from '@angular/forms';
 
@@ -27,6 +29,10 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { BoardComponent } from './board/board.component';
 import { KeyComponent } from './key/key.component';
 import { ThemeSlideComponent } from './theme-slide/theme-slide.component';
+import { KeyfullComponent } from './keyfull/keyfull.component';
+import { BoardfullComponent } from './boardfull/boardfull.component';
+import { KeyselectComponent } from './keyselect/keyselect.component';
+import { KeyboardComponent } from './keyboard/keyboard.component';
 
 
 @NgModule({
@@ -35,7 +41,11 @@ import { ThemeSlideComponent } from './theme-slide/theme-slide.component';
     ToolbarComponent,
     BoardComponent,
     KeyComponent,
-    ThemeSlideComponent
+    ThemeSlideComponent,
+    KeyfullComponent,
+    BoardfullComponent,
+    KeyselectComponent,
+    KeyboardComponent
   ],
   imports: [
     AppRoutingModule,
@@ -56,6 +66,7 @@ import { ThemeSlideComponent } from './theme-slide/theme-slide.component';
     MatSlideToggleModule,
     MatToolbarModule,
     OverlayModule,
+    MatDialogModule,CommonModule,
 
   ],
   providers: [],
