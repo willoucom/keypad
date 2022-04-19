@@ -13,60 +13,6 @@ import { HostListener } from '@angular/core';
   <mat-dialog-content>
     <app-keyselect [keycode]="'KC.NO'" [(selected)]=selected></app-keyselect>
     <app-keyselect [keycode]="'KC.TRANSPARENT'" [(selected)]=selected></app-keyselect>
-    <h2>Key</h2>
-    <app-keyselect id="a" [keycode]="'KC.A'" [(selected)]=selected></app-keyselect>
-    <app-keyselect id="b" [keycode]="'KC.B'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.C'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.D'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.E'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.F'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.G'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.H'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.I'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.J'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.K'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.L'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.M'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.N'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.O'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.P'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.Q'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.R'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.S'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.T'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.U'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.V'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.W'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.X'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.Y'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.Z'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.N1'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.N2'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.N3'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.N4'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.N5'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.N6'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.N7'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.N8'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.N9'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.N0'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.ENTER'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.ESCAPE'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.BSPACE'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.TAB'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.SPACE'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.MINUS'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.EQUAL'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.LBRACKET'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.RBRACKET'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.BSLASH'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.SCOLON'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.QUOTE'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.GRAVE'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.COMMA'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.DOT'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.SLASH'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.CAPSLOCK'" [(selected)]=selected></app-keyselect>
     <h2>Function keys</h2>
     <app-keyselect [keycode]="'KC.F1'" [(selected)]=selected></app-keyselect>
     <app-keyselect [keycode]="'KC.F2'" [(selected)]=selected></app-keyselect>
@@ -92,6 +38,94 @@ import { HostListener } from '@angular/core';
     <app-keyselect [keycode]="'KC.F22'" [(selected)]=selected></app-keyselect>
     <app-keyselect [keycode]="'KC.F23'" [(selected)]=selected></app-keyselect>
     <app-keyselect [keycode]="'KC.F24'" [(selected)]=selected></app-keyselect>
+    <h2>Keyboard</h2>
+    <app-keyselect [keycode]="'KC.GRAVE'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.N1'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.N2'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.N3'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.N4'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.N5'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.N6'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.N7'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.N8'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.N9'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.N0'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.MINUS'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.EQUAL'" [(selected)]=selected></app-keyselect>
+    <br/>
+    <app-keyselect [keycode]="'KC.A'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.B'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.C'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.D'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.E'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.F'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.G'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.H'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.I'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.J'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.K'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.L'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.M'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.N'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.O'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.P'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.Q'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.R'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.S'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.T'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.U'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.V'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.W'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.X'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.Y'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.Z'" [(selected)]=selected></app-keyselect>
+    <br/>
+    <app-keyselect [keycode]="'KC.ENTER'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.ESCAPE'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.BSPACE'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.TAB'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.SPACE'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.LBRACKET'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.RBRACKET'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.BSLASH'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.SCOLON'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.QUOTE'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.COMMA'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.DOT'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.SLASH'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.CAPSLOCK'" [(selected)]=selected></app-keyselect>
+
+    
+    <app-keyselect [keycode]="'KC.LCTRL'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.LSHIFT'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.LALT'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.LGUI'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.RCTRL'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.RSHIFT'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.RALT'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.RGUI'" [(selected)]=selected></app-keyselect>
+    <br/>
+    <app-keyselect [keycode]="'KC.TILDE'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.EXCLAIM'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.AT'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.HASH'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.DOLLAR'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.PERCENT'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.CIRCUMFLEX'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.AMPERSAND'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.ASTERISK'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.LEFT_PAREN'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.RIGHT_PAREN'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.UNDERSCORE'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.PLUS'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.LEFT_CURLY_BRACE'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.RIGHT_CURLY_BRACE'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.PIPE'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.COLON'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.DOUBLE_QUOTE'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.LEFT_ANGLE_BRACKET'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.RIGHT_ANGLE_BRACKET'" [(selected)]=selected></app-keyselect>
+    <app-keyselect [keycode]="'KC.QUESTION'" [(selected)]=selected></app-keyselect>
     <h2>Navigation keys</h2>
     <app-keyselect [keycode]="'KC.PSCREEN'" [(selected)]=selected></app-keyselect>
     <app-keyselect [keycode]="'KC.SCROLLLOCK'" [(selected)]=selected></app-keyselect>
@@ -130,15 +164,6 @@ import { HostListener } from '@angular/core';
     <app-keyselect [keycode]="'KC.LOCKING_SCROLL'" [(selected)]=selected></app-keyselect>
     <app-keyselect [keycode]="'KC.KP_COMMA'" [(selected)]=selected></app-keyselect>
     <app-keyselect [keycode]="'KC.KP_EQUAL_AS400'" [(selected)]=selected></app-keyselect>
-    <h2>Modifier keys</h2>
-    <app-keyselect [keycode]="'KC.LCTRL'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.LSHIFT'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.LALT'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.LGUI'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.RCTRL'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.RSHIFT'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.RALT'" [(selected)]=selected></app-keyselect>
-    <app-keyselect [keycode]="'KC.RGUI'" [(selected)]=selected></app-keyselect>
     <h2>Multimedia</h2>
     <app-keyselect [keycode]="'KC.AUDIO_MUTE'" [(selected)]=selected></app-keyselect>
     <app-keyselect [keycode]="'KC.AUDIO_VOL_UP'" [(selected)]=selected></app-keyselect>
@@ -150,6 +175,9 @@ import { HostListener } from '@angular/core';
     <app-keyselect [keycode]="'KC.MEDIA_EJECT'" [(selected)]=selected></app-keyselect>
     <app-keyselect [keycode]="'KC.MEDIA_FAST_FORWARD'" [(selected)]=selected></app-keyselect>
     <app-keyselect [keycode]="'KC.MEDIA_REWIND'" [(selected)]=selected></app-keyselect>
+
+
+
   </mat-dialog-content>
   <div mat-dialog-actions>
     <button mat-button mat-dialog-close>Close</button>

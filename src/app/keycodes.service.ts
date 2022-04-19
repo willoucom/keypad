@@ -38,32 +38,32 @@ export class KeycodesService {
     'KC.X': 'X',
     'KC.Y': 'Y',
     'KC.Z': 'Z',
-    'KC.N1': '1 and !',
-    'KC.N2': '2 and @',
-    'KC.N3': '3 and #',
-    'KC.N4': '4 and $',
-    'KC.N5': '5 and %',
-    'KC.N6': '6 and ^',
-    'KC.N7': '7 and &',
-    'KC.N8': '8 and *',
-    'KC.N9': '9 and (',
-    'KC.N0': '0 and )',
+    'KC.N1': '1',
+    'KC.N2': '2',
+    'KC.N3': '3',
+    'KC.N4': '4',
+    'KC.N5': '5',
+    'KC.N6': '6',
+    'KC.N7': '7',
+    'KC.N8': '8',
+    'KC.N9': '9',
+    'KC.N0': '0',
     'KC.ENTER': 'Return (Enter)',
     'KC.ESCAPE': 'Escape',
     'KC.BSPACE': 'Delete (Backspace)',
     'KC.TAB': 'Tab',
     'KC.SPACE': 'Spacebar',
-    'KC.MINUS': '- and _',
-    'KC.EQUAL': '= and +',
-    'KC.LBRACKET': '[ and {',
-    'KC.RBRACKET': '] and }',
-    'KC.BSLASH': '\\ and |',
-    'KC.SCOLON': '; and :',
-    'KC.QUOTE': '\' and \"',
-    'KC.GRAVE': '` and ~, JIS Zenkaku/Hankaku',
-    'KC.COMMA': ', and <',
-    'KC.DOT': '. and >',
-    'KC.SLASH': '/ and ?',
+    'KC.MINUS': '-',
+    'KC.EQUAL': '=',
+    'KC.LBRACKET': '[',
+    'KC.RBRACKET': ']',
+    'KC.BSLASH': '\\',
+    'KC.SCOLON': ';',
+    'KC.QUOTE': '\'',
+    'KC.GRAVE': '`',
+    'KC.COMMA': ',',
+    'KC.DOT': '.',
+    'KC.SLASH': '/',
     'KC.CAPSLOCK': 'Caps Lock',
     'KC.F1': 'F1',
     'KC.F2': 'F2',
@@ -143,6 +143,29 @@ export class KeycodesService {
     'KC.MEDIA_EJECT': 'Eject (macOS)',
     'KC.MEDIA_FAST_FORWARD': 'Next Track (macOS)',
     'KC.MEDIA_REWIND': 'Previous Track (macOS)',
+
+    'KC.TILDE': '~',
+    'KC.EXCLAIM': '!',
+    'KC.AT': '@',
+    'KC.HASH': '#',
+    'KC.DOLLAR': '$',
+    'KC.PERCENT': '%',
+    'KC.CIRCUMFLEX': '^',
+    'KC.AMPERSAND': '&',
+    'KC.ASTERISK': '*',
+    'KC.LEFT_PAREN': '(',
+    'KC.RIGHT_PAREN': ')',
+    'KC.UNDERSCORE': '_',
+    'KC.PLUS': '+',
+    'KC.LEFT_CURLY_BRACE': '{',
+    'KC.RIGHT_CURLY_BRACE': '}',
+    'KC.PIPE': '|',
+    'KC.COLON': ':',
+    'KC.DOUBLE_QUOTE': '"',
+    'KC.LEFT_ANGLE_BRACKET': '<',
+    'KC.RIGHT_ANGLE_BRACKET': '>',
+    'KC.QUESTION': '?',
+
   }
 
   public static getKeyCode(keyevent: KeyboardEvent): string {
@@ -151,8 +174,8 @@ export class KeycodesService {
     var key = keyevent.key;
     let ret:string = "";
 
-    // console.log(keyevent);
-    // console.log(code + " > "+  key);
+    console.log(keyevent);
+    console.log(code + " > "+  key);
 
     if ( key.match(/[A-z]/g) ) {
       ret = 'KC.' + key.toUpperCase();
@@ -161,6 +184,29 @@ export class KeycodesService {
     }
 
 		if (key === "/") ret = "KC.SLASH";
+    // French
+    else if (key === "&" && code === "Digit1") ret = "KC.N1";
+    else if (key === "é" && code === "Digit2") ret = "KC.N2";
+    else if (key === "\"" && code === "Digit3") ret = "KC.N3";
+    else if (key === "'" && code === "Digit4") ret = "KC.N4";
+    else if (key === "(" && code === "Digit5") ret = "KC.N5";
+    else if (key === "-" && code === "Digit6") ret = "KC.N6";
+    else if (key === "è" && code === "Digit7") ret = "KC.N7";
+    else if (key === "_" && code === "Digit8") ret = "KC.N8";
+    else if (key === "ç" && code === "Digit9") ret = "KC.N9";
+    else if (key === "à" && code === "Digit0") ret = "KC.N0";
+    else if (key === ")" && code === "Minus") ret = "KC.MINUS";
+    else if (key === "=" && code === "Equal") ret = "KC.EQUAL";
+
+    else if ((key === "Dead" ||key === "^") && code === "BracketLeft") ret = "KC.LBRACKET";
+    else if ((key === "Dead" || key === "$") && code === "BracketRight") ret = "KC.RBRACKET";
+    else if (key === "*" && code === "Backslash") ret = "KC.BSLASH";
+    else if (key === "ù" && code === "Quote") ret = "KC.QUOTE";
+    else if (key === "," && code === "KeyM") ret = "KC.COMMA";
+    else if (key === ";" && code === "Comma") ret = "KC.SCOLON";
+    else if (key === ":" && code === "Period") ret = "KC.COLON";
+    else if (key === "!" && code === "Slash") ret = "KC.EXCLAIM";
+    // Keyboard
 		else if (key === " ")  ret = "KC.SPACE";
 		else if (key === ".")  ret = "KC.DOT";
 		else if (key === ",")  ret = "KC.COMMA";
@@ -172,6 +218,7 @@ export class KeycodesService {
 		else if (key === "=")  ret = "KC.EQUAL";
 		else if (key === "-")  ret = "KC.MINUS";
 		else if (key === "`")  ret = "KC.GRAVE";
+    else if (code === "Backquote")  ret = "KC.GRAVE";
 		else if (key === "?")  ret = "KC.SLASH";
     // Not sure here
 		else if (key === ">")  ret = "KC.DOT";
@@ -205,6 +252,9 @@ export class KeycodesService {
     // Special keys
     else if (code === "Backspace")  ret = "KC.BSPACE";
     else if (code === "ContextMenu")  ret = "KC.RGUI";
+
+
+
     // Deadkey
     else if (key === "Dead")  ret = "";
 

@@ -1,5 +1,5 @@
 import { Component, SimpleChanges, OnChanges, OnInit, Input } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { KeyboardComponent } from '../keyboard/keyboard.component';
 import { KeycodesService } from '../keycodes.service';
 
@@ -146,7 +146,7 @@ export class BoardfullComponent {
     "21": "KC.DOWN",
     "22": "KC.RIGHT",
     "23": "KC.LEFT",
-    "24": "KC.ALT",
+    "24": "KC.LALT",
     "25": "KC.UP"
   }
 
