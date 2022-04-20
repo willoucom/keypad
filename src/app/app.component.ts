@@ -15,7 +15,6 @@ import { Component } from '@angular/core';
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 90%;
     }
   `]
 })
