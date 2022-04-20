@@ -13,10 +13,6 @@ interface Key {
   selector: 'app-boardfull',
   template: `
     <br/>
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Name</mat-label>
-      <input matInput [(ngModel)]="keys['NAME']"/>
-    </mat-form-field>
     <div class="board">
     <div class="key">
       <app-keyfull (click)="openDialog('0')" label="01" [selected]="keycodes.keycodesArray[keys[0]]"></app-keyfull>
@@ -99,7 +95,7 @@ interface Key {
     }
 
     .thumb{
-      float:right;
+      float:left;
       margin: 0px;
       padding: 0px;
       table , td, th, tr {
@@ -121,7 +117,6 @@ export class BoardfullComponent {
   public show: boolean = false;
 
   keys: {[key:string]:string} = {
-    "NAME": "Default",
     "0": "KC.N1",
     "1": "KC.N2",
     "2": "KC.N3",
@@ -154,7 +149,7 @@ export class BoardfullComponent {
 
   download() {
     let link = document.createElement('a');
-    let filename = 'keyset_'+ this.keys['NAME'] +'.json';
+    let filename = 'keyset.json';
     link.download = filename;
     let blob = new Blob([JSON.stringify(this.keys)], {type: 'text/plain'});
     link.href = URL.createObjectURL(blob);
