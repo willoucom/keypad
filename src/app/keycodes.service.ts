@@ -174,8 +174,8 @@ export class KeycodesService {
     var key = keyevent.key;
     let ret:string = "";
 
-    console.log(keyevent);
-    console.log(code + " > "+  key);
+    // console.log(keyevent);
+    // console.log(code + " > "+  key);
 
     if ( key.match(/[A-z]/g) ) {
       ret = 'KC.' + key.toUpperCase();
@@ -252,7 +252,13 @@ export class KeycodesService {
     // Special keys
     else if (code === "Backspace")  ret = "KC.BSPACE";
     else if (code === "ContextMenu")  ret = "KC.RGUI";
-
+    // Navigation
+    else if (code === "ArrowUp")  ret = "KC.UP";
+    else if (code === "ArrowDown")  ret = "KC.DOWN";
+    else if (code === "ArrowLeft")  ret = "KC.LEFT";
+    else if (code === "ArrowRight")  ret = "KC.RIGHT";
+    else if (code === "PageUp")  ret = "KC.PGUP";
+    else if (code === "PageDown")  ret = "KC.PGDOWN";
 
 
     // Deadkey
