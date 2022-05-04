@@ -26,8 +26,6 @@ import { FormsModule } from '@angular/forms';
 
 import { OverlayModule } from '@angular/cdk/overlay';
 
-import { BoardComponent } from './board/board.component';
-import { KeyComponent } from './key/key.component';
 import { ThemeSlideComponent } from './theme-slide/theme-slide.component';
 import { KeyfullComponent } from './keyfull/keyfull.component';
 import { BoardfullComponent } from './boardfull/boardfull.component';
@@ -39,8 +37,6 @@ import { KeyboardComponent } from './keyboard/keyboard.component';
   declarations: [
     AppComponent,
     ToolbarComponent,
-    BoardComponent,
-    KeyComponent,
     ThemeSlideComponent,
     KeyfullComponent,
     BoardfullComponent,
