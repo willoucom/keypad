@@ -149,7 +149,7 @@ export class BoardfullComponent {
 
   download() {
     let link = document.createElement('a');
-    let filename = 'keyset.json';
+    let filename = 'keys.json';
     link.download = filename;
     let blob = new Blob([JSON.stringify(this.keys)], {type: 'text/plain'});
     link.href = URL.createObjectURL(blob);
