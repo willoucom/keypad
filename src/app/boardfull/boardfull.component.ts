@@ -66,7 +66,8 @@ interface Key {
     </div>
     <br/>
     <div class="options">
-      <button mat-raised-button color="primary" (click)="download()">download</button>
+      <button mat-raised-button color="primary" (click)="download()">download</button>&nbsp;
+      <button mat-raised-button color="secondary" (click)="reset()">reset</button>
     </div>
     <br/>
     <mat-accordion>
@@ -145,7 +146,9 @@ export class BoardfullComponent {
     "25": "KC.UP"
   }
 
-  constructor(public dialog: MatDialog, public keycodes: KeycodesService) { }
+  constructor(public dialog: MatDialog, public keycodes: KeycodesService) { 
+    this.load();
+  }
 
   download() {
     let link = document.createElement('a');
@@ -164,7 +167,52 @@ export class BoardfullComponent {
     const dialogRef = this.dialog.open(KeyboardComponent, dialogConfig);
     dialogRef.afterClosed().subscribe(result => {
       this.keys[pos.toString()] = this.keycodes.selected;
+      this.save();
     });
+  }
+
+  load() {
+    let keys = localStorage.getItem('Storage');
+    if (keys) {
+      this.keys = JSON.parse(keys);
+    }
+  }
+
+  save() {
+    localStorage.setItem('Storage', JSON.stringify(this.keys));
+  }
+  
+
+  reset() {
+    this.keys = {
+      "0": "KC.N1",
+      "1": "KC.N2",
+      "2": "KC.N3",
+      "3": "KC.N4",
+      "4": "KC.N5",
+      "5": "KC.TAB",
+      "6": "KC.Q",
+      "7": "KC.W",
+      "8": "KC.E",
+      "9": "KC.R",
+      "10": "KC.LSHIFT",
+      "11": "KC.A",
+      "12": "KC.S",
+      "13": "KC.D",
+      "14": "KC.F",
+      "15": "KC.LCTRL",
+      "16": "KC.Z",
+      "17": "KC.X",
+      "18": "KC.C",
+      "19": "KC.V",
+      "20": "KC.LSHIFT",
+      "21": "KC.DOWN",
+      "22": "KC.RIGHT",
+      "23": "KC.LEFT",
+      "24": "KC.LALT",
+      "25": "KC.UP"
+    }
+    this.save();
   }
     
 }
