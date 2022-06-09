@@ -43,22 +43,27 @@ interface Key {
       <table>
         <tr>
           <td></td>
-          <td><app-keyfull (click)="openDialog('20')" label="Button" [selected]="keycodes.keycodesArray[keys[20]]"></app-keyfull></td>
+          <td><app-keyfull (click)="openDialog('20')" label="Button" [selected]="keycodes.keycodesArray[keys[20]]" size="small"></app-keyfull></td>
           <td></td>
         </tr>
         <tr>
           <td></td>
-          <td><app-keyfull (click)="openDialog('23')" label="Left" [selected]="keycodes.keycodesArray[keys[23]]"></app-keyfull></td>
+          <td><app-keyfull (click)="openDialog('21')" label="Left" [selected]="keycodes.keycodesArray[keys[21]]" size="small"></app-keyfull></td>
           <td></td>
         </tr>
         <tr>
-          <td><app-keyfull (click)="openDialog('21')" label="Down" [selected]="keycodes.keycodesArray[keys[21]]"></app-keyfull></td>
-          <td><app-keyfull (click)="openDialog('24')" label="Clic" [selected]="keycodes.keycodesArray[keys[24]]"></app-keyfull></td>
-          <td><app-keyfull (click)="openDialog('25')" label="Up" [selected]="keycodes.keycodesArray[keys[25]]"></app-keyfull></td>
+          <td><app-keyfull (click)="openDialog('22')" label="Down" [selected]="keycodes.keycodesArray[keys[22]]" size="small"></app-keyfull></td>
+          <td></td>
+          <td><app-keyfull (click)="openDialog('23')" label="Up" [selected]="keycodes.keycodesArray[keys[23]]" size="small"></app-keyfull></td>
         </tr>
         <tr>
           <td></td>
-          <td><app-keyfull (click)="openDialog('22')" label="Right" [selected]="keycodes.keycodesArray[keys[22]]"></app-keyfull></td>
+          <td><app-keyfull (click)="openDialog('24')" label="Right" [selected]="keycodes.keycodesArray[keys[24]]" size="small"></app-keyfull></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><app-keyfull (click)="openDialog('25')" label="Button" [selected]="keycodes.keycodesArray[keys[25]]" size="small"></app-keyfull></td>
           <td></td>
         </tr>
       </table>
@@ -75,7 +80,7 @@ interface Key {
         <mat-expansion-panel-header>
           <mat-panel-title>Code</mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-form-field class="full-width" appearance="fill">
           <mat-label>Json</mat-label>
           <textarea matInput disabled rows="30">{{ keys | json }}</textarea>
         </mat-form-field>
@@ -97,6 +102,7 @@ interface Key {
 
     .thumb{
       float:left;
+      height: 400px;
       margin: 0px;
       padding: 0px;
       table , td, th, tr {
@@ -107,7 +113,7 @@ interface Key {
       }
     }
 
-    .example-full-width {
+    .full-width {
       width: 100%;
     }
     `
